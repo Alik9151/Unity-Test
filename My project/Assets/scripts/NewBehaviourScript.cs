@@ -31,7 +31,7 @@ public class NewBehaviourScript : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, distance, GroundLayer);
 
-        // Check if the raycast hits something with the "ground" tag
+        
         isOnGround = hit.collider != null ;
 
         Debug.Log("Raycast hit: " + hit.collider.name);
@@ -39,7 +39,7 @@ public class NewBehaviourScript : MonoBehaviour
         // Jump if on the ground and the player presses space or W
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && isOnGround)
         {
-            rb.AddForce(Vector2.up * 7.5f, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
             Debug.Log("Can't jump");
         }
         else if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
