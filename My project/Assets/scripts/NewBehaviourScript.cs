@@ -12,8 +12,6 @@ public class NewBehaviourScript : MonoBehaviour
     private BoxCollider2D _collider;
     public LayerMask GroundLayer;
     public float jumpCooldownCounter;
-   
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
