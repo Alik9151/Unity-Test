@@ -279,8 +279,8 @@ Transform:
   m_GameObject: {fileID: 614632214}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.82, y: 0.64, z: 0}
-  m_LocalScale: {x: 11.613201, y: 5.4867086, z: 1}
+  m_LocalPosition: {x: -7.4542, y: 4.1896, z: 0}
+  m_LocalScale: {x: 12.017656, y: 56.444138, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1610137046}
@@ -575,9 +575,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d90ae69d3dcb64e930c09872cd21d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpCooldownCounter: 0
   rb: {fileID: 1372526204}
   groundCheck: {fileID: 1117958785}
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  GroundLayer:
     serializedVersion: 2
     m_Bits: 64
 --- !u!61 &1372526203
