@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -44,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Flip();
-        float distance = _collider.bounds.extents.y + 0.1f;
     }
 
     private void FixedUpdate()
@@ -53,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        float distance = _collider.bounds.extents.y + 0.1f;
+        float distance = _collider.bounds.extents.y + 0.01f;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, distance, GroundLayer);
         return hit.collider != null;
     }
